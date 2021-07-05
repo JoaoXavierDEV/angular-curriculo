@@ -1,21 +1,10 @@
 header {
-     background-color: blueviolet;
-}
-
-.header::before {
-
-    display: flex;
-    width: 1800px;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
-    background-color: #ce1313;
+     background-color: rgb(0, 0, 0);
 }
 
 .header {
     display: flex;
-     background-color: #864848;
+     background-color: #000000;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
@@ -60,6 +49,7 @@ header {
 @media (max-width: 800px) {
     .header {
         flex-direction: row-reverse;
+        width: 100vw;
         height: 58px;
     }
 

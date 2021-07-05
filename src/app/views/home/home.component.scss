@@ -1,22 +1,26 @@
 @import '../../../styles.scss';
+
 .grid1 h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 40px;
     font-weight: bold;
     color: rgb(255, 255, 255);
+
 }
 
-
-.containerBackground {
-    position: relative;
+body {
+    // border: blue 2px dashed;
+    // display: block;
+    // position: relative;
     background-image: linear-gradient(180deg, #11111188 0%, #111111 80.73%, #111111 100%), url($background1);
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: cover;
-    margin-bottom: 20px;
-    height: 20%;
+    margin-bottom: 40px;
+    // height: 50%;
 }
 
+/*
 .containerBackground h1 {
     text-align: center;
     position: absolute;
@@ -29,13 +33,36 @@
     text-transform: uppercase;
     font-family: 'Saira Condensed', sans-serif;
     font-size: 46px;
+}*/
+
+article {
+    margin-bottom: 20px;
+}
+
+.li {
+    list-style: square inside !important;
+}
+
+.conteudoCurriculo {
+    margin-left: 28px;
+    display: block;
+    grid-area: conteudoCurriculo;
+}
+
+.conteudoCurriculo p {
+    text-indent: 3ch;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 22px;
 }
 
 .iconSoftware {
     width: 256px;
     height: 80px;
 }
+
 .grid1 {
+
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-areas:
@@ -45,6 +72,8 @@
     gap: 20px;
     width: 1300px;
     margin: 0 auto;
+    margin-top: 50px;
+    backdrop-filter: blur(5px);
 }
 
 .painelDeUsuario {
@@ -62,39 +91,35 @@
     list-style: none;
     font-size: 1.2rem;
 }
-.conteudoCurriculo {
-    display: block;
-    grid-area: conteudoCurriculo;
-}
 
-.conteudoCurriculjo p {
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
 
 .tituloH1 {
     grid-area: tituloH1;
-    display: flex;
-    grid-template-rows: 1fr;
-    justify-content: start;
-    text-align: center;
-    align-items: center;
+    display: block;
+
+    // grid-template-rows: 1fr;
+    height: 100%;
+    // justify-content: start;
+    /// text-align: center;
+    //align-items: center;
 
 }
 
 .tituloH1 h1 {
     text-transform: uppercase;
+
     color: var(--textoTitulo);
     position: relative;
     font-size: 28px;
     font-weight: 900;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     margin-left: 20px;
 }
 
 .tituloH1 h1::before {
     content: '';
     position: absolute;
+
     left: -30px;
     bottom: -6px;
     background-color: var(--corPrimaria);
@@ -123,6 +148,7 @@
     text-align: justify;
     line-break: strict;
 }
+
 @media only screen and (max-width: 800px) {
     .grid1 {
         background-color: rgba(255, 0, 170, 0.302);
@@ -142,6 +168,7 @@
         background-color: transparent;
         width: 350px;
         margin: 0px auto;
+        margin-top: 20px;
         grid-template-columns: 1fr;
         grid-template-areas:
             "painelUsuario"
@@ -157,6 +184,7 @@
 
     .conteudoCurriculo {
         grid-area: conteudoCurriculo;
+        margin-left: 0px;
     }
 
     .projetos {

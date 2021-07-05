@@ -1,0 +1,85 @@
+$border-radius: 14%;
+$tamanhoDaFotoPerfil: 200px;
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.quadro {
+    position: relative;
+    display: inline-block;
+    width: $tamanhoDaFotoPerfil;
+    height: $tamanhoDaFotoPerfil;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    border-radius: $border-radius;
+    transition-duration: 150ms;
+    transition-delay: 50ms;
+    transition-property: box-shadow;
+
+    &:hover {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.card {
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    border-radius: $border-radius;
+    width: $tamanhoDaFotoPerfil;
+    height: $tamanhoDaFotoPerfil;
+    // max-width: 100%;
+
+    display: block;
+
+
+    &:hover {
+        width: $tamanhoDaFotoPerfil;
+        height: $tamanhoDaFotoPerfil;
+    }
+
+}
+
+
+.desfoque {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    top: 0px;
+    display: flex;
+    width: $tamanhoDaFotoPerfil;
+    height: $tamanhoDaFotoPerfil;
+    border-radius: $border-radius;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000be 80.73%, #000000c7 100%);
+    transition-duration: 150ms;
+    transition-delay: 50ms;
+    transition-property: background, backdrop-filter;
+
+    &:hover {
+        // background: linear-gradient(180deg, rgba(118, 49, 172, 0) 0%, #45166B 80.73%, #45166A 100%);
+        backdrop-filter: blur(1px) grayscale(100%);
+    }
+
+}
+
+.textoCard {
+    // border: 1px yellow dotted;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    text-align: center;
+    font-family: 'Exo 2';
+    // font-style: normal;
+    // font-weight: 400;
+    font-size: 20px;
+    // line-height: 400px;
+    text-shadow: rgba(0, 0, 0, 0.747) 4px 5px 2px;
+    color: #ffffff;
+    transition-duration: 150ms;
+    transition-delay: 50ms;
+    transition-property: font-size;
+
+
+    &:hover {
+       //  font-size: 22px;
+    }
+}

@@ -4,19 +4,21 @@
     font-family: 'Orbitron', sans-serif;
     font-size: 40px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    // color: rgb(255, 255, 255);
+    color: $textoTitulo;
 
 }
 
 body {
-    // border: blue 2px dashed;
+     // border: blue 2px dashed;
     // display: block;
     // position: relative;
-    background-image: linear-gradient(180deg, #11111188 0%, #111111 80.73%, #111111 100%), url($background1);
+    // background-image: linear-gradient(180deg, #11111188 0%, #111111 80.73%, #111111 100%), url($background1);
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: cover;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
+
     // height: 50%;
 }
 
@@ -41,6 +43,7 @@ article {
 
 .li {
     list-style: square inside !important;
+    
 }
 
 .conteudoCurriculo {
@@ -64,6 +67,7 @@ article {
 .grid1 {
 
     display: grid;
+    
     grid-template-columns: 1fr 6fr;
     grid-template-areas:
         "painelUsuario conteudoCurriculo"
@@ -163,7 +167,7 @@ article {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
     .grid1 {
         background-color: transparent;
         width: 350px;

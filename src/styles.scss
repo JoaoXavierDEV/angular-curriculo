@@ -76,3 +76,7 @@ img {
     display: block;
     object-fit: cover;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

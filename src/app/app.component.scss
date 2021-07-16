@@ -39,12 +39,12 @@ mat-selection-list mat-list-option {
     margin-top: 1.5rem;
     font-size: 24px;
     font-weight: normal;
-    
+
 }
 
 .designation {
     margin-top: 2px;
-    font-size: 0.7rem;
+    font-size: 1.1rem;
     color: lightgrey;
 }
 
@@ -52,7 +52,20 @@ mat-divider {
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.5);
+}
 
+Mat-List-Option[aria-selected="true"] {
+    border-left: 8px solid var(--corPrimaria);
+    transition: background-color, border-left 600ms;
+    background-color: #0000004d;
+
+    &:hover {
+        background-color: rgba(5, 113, 208, 0.267);
+    }
+}
+
+Mat-List-Option[aria-selected="false"]:hover {
+    background-color: rgba(5, 113, 208, 0.925);
 }
 
 .content {
@@ -73,11 +86,11 @@ mat-divider {
 
 mat-sidenav-content {
     background-color: #212121;
+    // background-color: rgb(167, 62, 62);
 }
 
 mat-sidenav-container {
     height: calc(100vh - 65px);
-    background-color: rgb(167, 62, 62);
 
 }
 

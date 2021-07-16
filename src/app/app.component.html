@@ -53,29 +53,29 @@
 
             <app-usercard></app-usercard>
             <h4 class="name">João Fernando </h4>
-            <p class="designation">Software Engineer</p>
+            <p class="designation">16072021.0150</p>
 
             <mat-selection-list  [multiple]="false">
-                <mat-list-option>
-                    <button mat-button class="menu-button" routerLink="" (click)="vaiFechar()">
+                <mat-list-option [selected]="true" routerLink="" (click)="vaiFechar()">
+                    <button mat-button class="menu-button"  >
                         <mat-icon>dashboard</mat-icon>
                         <span>Currículo</span>
                     </button>
                 </mat-list-option>
-                <mat-list-option>
-                    <button mat-button class="menu-button" routerLink="/projetos" (click)="vaiFechar()">
+                <mat-list-option  routerLink="/projetos" (click)="vaiFechar()">
+                    <button mat-button class="menu-button">
                         <mat-icon>extension</mat-icon>
                         <span>Projetos</span>
                     </button>
                 </mat-list-option>
-                <mat-list-option>
-                    <button mat-button class="menu-button" routerLink="/sobre" (click)="vaiFechar()">
+                <mat-list-option routerLink="/sobre" (click)="vaiFechar()">
+                    <button mat-button class="menu-button">
                         <mat-icon>person</mat-icon>
                         <span>Redes Sociais - Sobre</span>
                     </button>
                 </mat-list-option>
-                <mat-list-option>
-                    <button mat-button class="menu-button" routerLink="/site-v1" (click)="vaiFechar()">
+                <mat-list-option routerLink="/site-v1" (click)="vaiFechar()">
+                    <button mat-button class="menu-button">
                         <mat-icon>restore_page</mat-icon>
                         <span>Site v1 - antes do Angular Material</span>
                     </button>

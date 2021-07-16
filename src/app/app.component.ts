@@ -40,12 +40,10 @@ export class AppComponent {
   }
 
   compartilhar() {
-
-    console.log('foii');
     navigator.share({
       title: 'Currículo',
       url: 'https://joaoxavierdeveloper.netlify.app/',
-      text: 'Me Contrate!!'
+      text: '!!!!!'
     }).then(() => {
       console.log('foii');
     })

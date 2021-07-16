@@ -1,15 +1,28 @@
 @use '~@angular/material'as mat;
 
 mat-sidenav {
-    // margin: 16px;
-    // border-radius: 10px;
+
     width: 350px;
 
+
     background-color: #220126;
-    border-right: 8px rgb(0, 132, 255) solid;
+    border-right: 6px rgb(0, 132, 255) solid;
     color: white;
     padding: 16px;
     text-align: center;
+}
+
+.drawer {
+
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: stretch;
+    align-content: stretch;
+
+    height: calc(100vh - 65px);
+
 }
 
 mat-selection-list mat-list-option {
@@ -39,20 +52,11 @@ mat-selection-list mat-list-option {
     margin-top: 1.5rem;
     font-size: 24px;
     font-weight: normal;
+    text-transform: uppercase;
 
 }
 
-.designation {
-    margin-top: 2px;
-    font-size: 1.1rem;
-    color: lightgrey;
-}
 
-mat-divider {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
 
 Mat-List-Option[aria-selected="true"] {
     border-left: 8px solid var(--corPrimaria);
@@ -66,6 +70,37 @@ Mat-List-Option[aria-selected="true"] {
 
 Mat-List-Option[aria-selected="false"]:hover {
     background-color: rgba(5, 113, 208, 0.925);
+
+}
+
+.fa {
+    width: 25px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: rgb(255, 255, 255);
+    border-bottom: 4px solid transparent;
+
+    box-sizing: padding-box;
+    transition: border-bottom 800ms;
+
+    // background-color: red;
+    // border: 2px solid rgb(255, 255, 255);
+    // border-radius: 50%;
+    &:hover {
+        border-bottom: 4px solid var(--corPrimaria);
+    }
+}
+
+.mediasSociais {
+    // display: block;
+   // border: 1px blue solid;
+    margin-bottom: 32px;
+   // background-color: red;
+
+
 }
 
 .content {

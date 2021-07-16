@@ -39,6 +39,9 @@ import { SiteV1Component } from './views/site-v1/site-v1.component';
 /// flex layout
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 import { SobreComponent } from './views/sobre/sobre.component';
 
 /** 
@@ -83,10 +86,16 @@ import { SobreComponent } from './views/sobre/sobre.component';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
-    FlexLayoutModule // flex layout
+    FlexLayoutModule, // flex layout
+    
+    
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+   
+  }
+ }

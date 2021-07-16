@@ -36,9 +36,9 @@
                 </svg>
             </a>
             <span class="example-spacer"></span>
-            <span>Currículo</span>
+            <span>{{title}}</span>
             <span class="example-spacer"></span>
- 
+
             <button mat-icon-button (click)="compartilhar()">
                 <mat-icon>share</mat-icon>
             </button>
@@ -48,52 +48,56 @@
 
     <!--SIDE BAR -->
     <mat-sidenav-container (backdropClick)="vaiFechar()">
-        <mat-sidenav mode="side" class="mat-elevation-z8" #sidenav="matSidenav" (keydown.escape)="close()">
+        <mat-sidenav mode="side" class="mat-sidenaav"
+            #sidenav="matSidenav" (keydown.escape)="close()">
+            <div class="drawer">
+<div>
+<app-usercard></app-usercard>
+<h4 class="name">João Fernando</h4>
 
+<mat-selection-list [multiple]="false">
+    <mat-list-option [selected]="true" routerLink="" (click)="vaiFechar()">
+        <button mat-button class="menu-button">
+            <mat-icon>dashboard</mat-icon>
+            <span>Currículo</span>
+        </button>
+    </mat-list-option>
+    <mat-list-option routerLink="/projetos" (click)="vaiFechar()">
+        <button mat-button class="menu-button">
+            <mat-icon>extension</mat-icon>
+            <span>Projetos</span>
+        </button>
+    </mat-list-option>
+    <mat-list-option routerLink="/sobre" (click)="vaiFechar()">
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span>Redes Sociais - Sobre</span>
+        </button>
+    </mat-list-option>
+    <mat-list-option routerLink="/site-v1" (click)="vaiFechar()">
+        <button mat-button class="menu-button">
+            <mat-icon>restore_page</mat-icon>
+            <span>Site v1 - antes do Angular Material</span>
+        </button>
+    </mat-list-option>
+</mat-selection-list>
 
-            <app-usercard></app-usercard>
-            <h4 class="name">João Fernando </h4>
-            <p class="designation">16072021.0150</p>
+</div>
+           
+           
 
-            <mat-selection-list  [multiple]="false">
-                <mat-list-option [selected]="true" routerLink="" (click)="vaiFechar()">
-                    <button mat-button class="menu-button"  >
-                        <mat-icon>dashboard</mat-icon>
-                        <span>Currículo</span>
-                    </button>
-                </mat-list-option>
-                <mat-list-option  routerLink="/projetos" (click)="vaiFechar()">
-                    <button mat-button class="menu-button">
-                        <mat-icon>extension</mat-icon>
-                        <span>Projetos</span>
-                    </button>
-                </mat-list-option>
-                <mat-list-option routerLink="/sobre" (click)="vaiFechar()">
-                    <button mat-button class="menu-button">
-                        <mat-icon>person</mat-icon>
-                        <span>Redes Sociais - Sobre</span>
-                    </button>
-                </mat-list-option>
-                <mat-list-option routerLink="/site-v1" (click)="vaiFechar()">
-                    <button mat-button class="menu-button">
-                        <mat-icon>restore_page</mat-icon>
-                        <span>Site v1 - antes do Angular Material</span>
-                    </button>
-                </mat-list-option>
+            <div class="mediasSociais">
 
-            </mat-selection-list>
+                <a href="https://www.facebook.com/jfmx95/" target="_blank" class="fa fa-facebook-official"
+                    aria-hidden="true"></a>
+                <a href="https://github.com/joaojfmx" target="_blank" class="fa fa-github" aria-hidden="true"></a>
+                <a href="https://www.instagram.com/joaojfmx/" target="_blank" class="fa fa-instagram"
+                    aria-hidden="true"></a>
+                <a href="https://www.linkedin.com/in/joaofernandoxavier/" target="_blank" class="fa fa-linkedin-square"
+                    aria-hidden="true"></a>
+            </div>
+</div>
 
-
-
-
-
-
-            <span class="example-spacer"></span>
-            <mat-divider></mat-divider>
-            <button mat-button class="menu-button">
-                <mat-icon>close</mat-icon>
-                <span>Sair</span>
-            </button>
 
         </mat-sidenav>
         <mat-sidenav-content>

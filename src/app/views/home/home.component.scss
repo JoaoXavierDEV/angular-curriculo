@@ -35,11 +35,17 @@ article {
     padding: 20px;
     margin-bottom: 30px;
 
-    transition: box-shadow 600ms;
+    transition: box-shadow 800ms, backdrop-filter 200ms linear;
 }
 
 article:hover {
+    backdrop-filter: blur(16px) saturate(200%);
     box-shadow: -5px -5px $azul, 5px 5px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
+    // box-shadow: 10px 10px $azul, -10px -10px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+article[aria-selected="true"] {
+    background-color: red;
 }
 
 mat-grid-list mat-grid-tile {

@@ -50,8 +50,8 @@ img {
     height: $tamanhoDaFotoPerfil;
     border-radius: $border-radius;
     // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000be 80.73%, #000000c7 100%);
-    transition-duration: 150ms;
-    transition-delay: 50ms;
+    transition-duration: 600ms;
+    // transition-delay: 500ms;
     transition-property: background, backdrop-filter;
 
     &:hover {

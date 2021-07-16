@@ -1,0 +1,90 @@
+/*.projetos {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.itemProjeto {
+    display: block;
+    width: 340px;
+    // border: 1px dashed yellow;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.itemProjeto p {
+    //padding: 20px;
+    text-align: justify;
+    line-break: strict;
+}
+
+.iconSoftware {
+    width: 256px;
+    height: 80px;
+}
+
+
+.tituloH1 {
+    grid-area: tituloH1;
+    display: block;
+    height: 100%;
+}
+
+.tituloH1 h1 {
+    text-transform: uppercase;
+    color: var(--textoTitulo);
+    position: relative;
+    font-size: 28px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+.tituloH1 h1::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    bottom: -6px;
+    background-color: var(--corPrimaria);
+    height: 44px;
+    box-sizing: border-box;
+    width: 10px;
+}*/
+
+
+////@at-root
+
+mat-card{
+    max-width: 400px;
+    color: darkblue;
+    
+}
+
+img{
+
+}
+ mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content>mat-card {
+     margin-bottom: 16px;
+}
+
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+p{
+    color: darkblue;
+}

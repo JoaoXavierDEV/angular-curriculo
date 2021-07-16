@@ -1,3 +1,106 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <mat-toolbar>
+        <mat-toolbar-row>
+
+            <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+                <mat-icon *ngIf="!sidenav.opened">
+                    menu
+                </mat-icon>
+                <mat-icon *ngIf="sidenav.opened">
+                    close
+                </mat-icon>
+            </button>
+
+
+            <a routerLink="/">
+                <svg class="logoMenu" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 1644 1033">
+
+
+                    <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer" />
+                        <path
+                            d="M334 767l-334 -251 334 -250 77 70 -246 180 246 182 -77 70zm975 -501l335 250 -335 251 -77 -70 246 -180 -246 -181 77 -70zm-108 -266l-554 467 148 0 -28 29c-9,10 -19,19 -29,29 -9,10 -19,20 -28,29l-43 44c-18,19 -39,40 -57,59 -13,14 -30,30 -42,44l135 0c-2,4 -28,36 -32,42 -22,27 -43,56 -65,82 -22,27 -43,55 -65,82 -22,26 -44,57 -65,83l-33 42 560 -460 -162 -4c2,-3 23,-24 28,-29 5,-5 9,-10 14,-14 5,-5 10,-10 15,-14 9,-10 19,-19 28,-29 18,-18 40,-39 57,-58 9,-10 19,-19 29,-29 9,-10 19,-20 28,-29 5,-5 26,-25 28,-29l-131 0 264 -338z" />
+                    </g>
+                </svg>
+            </a>
+            <span class="example-spacer"></span>
+            <span>Currículo</span>
+            <span class="example-spacer"></span>
+ 
+            <button mat-icon-button (click)="compartilhar()">
+                <mat-icon>share</mat-icon>
+            </button>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <!--SIDE BAR -->
+    <mat-sidenav-container (backdropClick)="vaiFechar()">
+        <mat-sidenav mode="side" class="mat-elevation-z8" #sidenav="matSidenav" (keydown.escape)="close()">
+
+
+            <app-usercard></app-usercard>
+            <h4 class="name">João Fernando </h4>
+            <p class="designation">Software Engineer</p>
+
+            <mat-selection-list  [multiple]="false">
+                <mat-list-option>
+                    <button mat-button class="menu-button" routerLink="" (click)="vaiFechar()">
+                        <mat-icon>dashboard</mat-icon>
+                        <span>Currículo</span>
+                    </button>
+                </mat-list-option>
+                <mat-list-option>
+                    <button mat-button class="menu-button" routerLink="/projetos" (click)="vaiFechar()">
+                        <mat-icon>extension</mat-icon>
+                        <span>Projetos</span>
+                    </button>
+                </mat-list-option>
+                <mat-list-option>
+                    <button mat-button class="menu-button" routerLink="/sobre" (click)="vaiFechar()">
+                        <mat-icon>person</mat-icon>
+                        <span>Redes Sociais - Sobre</span>
+                    </button>
+                </mat-list-option>
+                <mat-list-option>
+                    <button mat-button class="menu-button" routerLink="/site-v1" (click)="vaiFechar()">
+                        <mat-icon>restore_page</mat-icon>
+                        <span>Site v1 - antes do Angular Material</span>
+                    </button>
+                </mat-list-option>
+
+            </mat-selection-list>
+
+
+
+
+
+
+            <span class="example-spacer"></span>
+            <mat-divider></mat-divider>
+            <button mat-button class="menu-button">
+                <mat-icon>close</mat-icon>
+                <span>Sair</span>
+            </button>
+
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <!----<div class="content mat-elevation-z8"></div>-->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</body>
+
+</html>

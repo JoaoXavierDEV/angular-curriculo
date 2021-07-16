@@ -1,0 +1,202 @@
+@import '../../../styles.scss';
+
+a {
+    color: rgb(255, 251, 0) !important;
+}
+
+h1 h2 h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.grid1 h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    // color: rgb(255, 255, 255);
+    color: $textoTitulo;
+
+}
+
+body {
+    // border: blue 2px dashed;
+    // display: block;
+    // position: relative;
+    // background-image: linear-gradient(180deg, #11111188 0%, #111111 80.73%, #111111 100%), url($background1);
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+    // margin-bottom: 40px;
+
+    // height: 50%;
+}
+
+/*
+.containerBackground h1 {
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 46px;
+}*/
+
+article {
+    margin-bottom: 20px;
+}
+
+.li {
+    list-style: square inside !important;
+
+}
+
+.conteudoCurriculo {
+    // margin-left: 28px;
+    display: block;
+    grid-area: conteudoCurriculo;
+}
+
+.conteudoCurriculo p {
+    text-indent: 3ch;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 22px;
+}
+
+.iconSoftware {
+    width: 256px;
+    height: 80px;
+}
+
+.grid1 {
+
+    display: grid;
+
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+        "conteudoCurriculo conteudoCurriculo"
+        "tituloH1 tituloH1"
+        "projetos projetos";
+    gap: 20px;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    backdrop-filter: blur(5px);
+}
+
+
+
+.grid1 ul li {
+    margin: 14px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+
+.tituloH1 {
+    grid-area: tituloH1;
+    display: block;
+    // grid-template-rows: 1fr;
+    height: 100%;
+    // justify-content: start;
+    /// text-align: center;
+    //align-items: center;
+}
+
+.tituloH1 h1 {
+    text-transform: uppercase;
+
+    color: var(--textoTitulo);
+    position: relative;
+    font-size: 28px;
+    font-weight: 900;
+    // margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.tituloH1 h1::before {
+    content: '';
+    position: absolute;
+
+    left: -30px;
+    bottom: -6px;
+    background-color: var(--corPrimaria);
+    height: 44px;
+    box-sizing: border-box;
+    width: 10px;
+}
+
+
+.projetos {
+    grid-area: projetos;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // margin-bottom: 200px;
+}
+
+.itemProjeto {
+    display: grid;
+    justify-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.itemProjeto p {
+    padding: 20px;
+    text-align: justify;
+    line-break: strict;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid1 {
+        // background-color: rgba(255, 0, 170, 0.302);
+        margin: 40px auto;
+        width: 800px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width: 400px) {
+    .grid1 {
+        background-color: transparent;
+        width: 350px;
+        margin: 0px auto;
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "painelUsuario"
+            "conteudoCurriculo"
+            "tituloH1"
+            "projetos";
+    }
+
+    .painelDeUsuario {
+        grid-area: painelUsuario;
+        gap: 2px;
+    }
+
+    .conteudoCurriculo {
+        grid-area: conteudoCurriculo;
+        margin-left: 0px;
+    }
+
+    .projetos {
+        grid-area: projetos;
+        grid-template-columns: 1fr;
+    }
+
+    .containerBackground h1 {
+        font-size: 20px;
+        font-stretch: expanded;
+    }
+}

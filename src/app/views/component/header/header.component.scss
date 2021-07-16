@@ -108,22 +108,7 @@ header {
         animation-duration: 1s;
     }
 
-    /*
-    #btnMenu ~.menu {
-       display: block;
-       //height: calc(100vh - 70px);
-       //  width: 100%;
-       //  backdrop-filter: blur(4px);
-       // top: 70px;
-       //  right: 0px;
-       //   position: absolute;
-       //  background-color: rgba(0, 0, 0, 0.611);
-       // z-index: 1000;
-       animation: fadeOutRight;
-       animation-duration: 2s;
-   }*/
 
-    // #btnMenu:not(:checked) ~.menu {
 
 
 
@@ -195,7 +180,6 @@ header {
         transform: rotate(45deg);
         top: 10px;
     }
-
-
-
 }
+
+

@@ -1,1 +1,58 @@
-<p>projetos works!</p>
+<!--<div class="tituloH1">
+    <h1>Projetos</h1>
+</div>
+<div class="projetos">
+    <div class="itemProjeto">
+        <object class="iconSoftware" data="../../../assets/sistema/logos/flutter.svg"></object>
+        <h1><a href="https://github.com/joaojfmx/Autonomo_app">AutônomoApp</a></h1>
+        <p>App desenvolvido para unir pessoas autônomas a pessoas que buscam algum tipo de serviço.
+            **Projeto criado para fins de aprendizado**</p>
+    </div>
+    <div class="itemProjeto">
+        <object class="iconSoftware" data="../../../assets/sistema/logos/angular2.svg"></object>
+        <h1><a href="#">Site currículo</a></h1>
+        <p>Desenvolvido em CSS Grid/Flex sem bootstrap ou qualquer framework.
+        </p>
+
+    </div>
+    <div class="itemProjeto">
+        <object class="iconSoftware" data="../../../assets/sistema/logos/ionic.svg"></object>
+        <h1><a href="https://github.com/joaojfmx/ionic_4-cestafacil">Cesta Fácil</a></h1>
+        <p>Projeto final feito em 2019 no curso técnico SENAC
+        </p>
+    </div>
+</div>-->
+<div class="content animate__animated animate__fadeIn">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" >
+            <mat-card class="mat-elevation-z8">
+                <mat-card-header>
+                    <mat-card-title>AutônomoApp</mat-card-title>
+                    <mat-card-subtitle>FLUTTER</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://miro.medium.com/max/2000/1*PCKC8Ufml-wvb9Vjj3aaWw.jpeg">
+                <mat-card-content>
+                    <p style="color:black">
+                        App desenvolvido para unir pessoas autônomas a pessoas que buscam algum tipo de serviço.
+                        **Projeto criado para fins de aprendizado**
+                    </p>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Self aware panel
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>Github</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

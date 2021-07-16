@@ -1,4 +1,6 @@
-import { FooterComponent } from './views/footer/footer.component';
+import { SobreComponent } from './views/sobre/sobre.component';
+import { SiteV1Component } from './views/site-v1/site-v1.component';
+import { FooterComponent } from './views/component/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,6 +14,13 @@ const routes: Routes = [
   , {
     path: 'projetos',
     component: ProjetosComponent
+  }
+  , {
+    path: 'site-v1',
+    component: SiteV1Component
+  }, {
+    path: 'sobre',
+    component: SobreComponent
   }
 ];
 

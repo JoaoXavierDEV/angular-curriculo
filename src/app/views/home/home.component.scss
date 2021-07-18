@@ -7,20 +7,24 @@ $azul: #0866FF;
 
 section {
     background-image: url($background1);
-    background: linear-gradient(135deg, #4a025996 0%, #1a068a54 50%, #44025296 100%), url($background1);
+    background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
     height: calc(100vh - 65px);
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: cover;
 
+
 }
 
 .conteudo {
-    padding: 20px;
+    padding: 40px;
+
+
 }
 
 article {
     // backdrop-filter: drop-shadow(10px 10px 10px rgb(12, 248, 0));
+    width: calc(100vw - 500px);
 
     box-shadow: 5px 5px $azul, 10px 10px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
     // background: #1010103b;
@@ -35,6 +39,7 @@ article {
     padding: 20px;
     margin-bottom: 30px;
 
+
     transition: box-shadow 800ms, backdrop-filter 200ms linear;
 }
 
@@ -44,9 +49,6 @@ article:hover {
     // box-shadow: 10px 10px $azul, -10px -10px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-article[aria-selected="true"] {
-    background-color: red;
-}
 
 mat-grid-list mat-grid-tile {
     display: flex;
@@ -101,5 +103,11 @@ mat-grid-list mat-grid-tile {
         list-style: square inside;
         margin: 15px 0px;
         // border: 2px yellow dotted;
+    }
+}
+
+@media (max-width: 800px) {
+    article {
+        width: 80vw;
     }
 }

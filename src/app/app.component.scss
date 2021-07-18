@@ -13,7 +13,7 @@ mat-sidenav {
 }
 
 .drawer {
-
+    // border: 2px solid rgb(255, 255, 255);
 
     display: flex !important;
     flex-direction: column !important;
@@ -21,7 +21,7 @@ mat-sidenav {
     align-items: stretch;
     align-content: stretch;
 
-    height: calc(100vh - 65px);
+    height: calc(100vh - 100px);
 
 }
 
@@ -83,11 +83,12 @@ Mat-List-Option[aria-selected="false"]:hover {
     color: rgb(255, 255, 255);
     border-bottom: 4px solid transparent;
 
-    box-sizing: padding-box;
+    // box-sizing: border-box;
     transition: border-bottom 800ms;
 
     // background-color: red;
-    // border: 2px solid rgb(255, 255, 255);
+   // border: 2px solid rgb(255, 255, 255);
+
     // border-radius: 50%;
     &:hover {
         border-bottom: 4px solid var(--corPrimaria);
@@ -96,9 +97,9 @@ Mat-List-Option[aria-selected="false"]:hover {
 
 .mediasSociais {
     // display: block;
-   // border: 1px blue solid;
-    margin-bottom: 32px;
-   // background-color: red;
+    // border: 1px blue solid;
+    // margin-bottom: 0px;
+ //   background-color: red;
 
 
 }

@@ -31,6 +31,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 
 import { NavComponent } from './views/component/nav/nav.component';
@@ -44,10 +46,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { SobreComponent } from './views/sobre/sobre.component';
 
-/** 
- * 
- import { NgNavigatorShareService } from 'ng-navigator-share';
- */
+import { environment } from '../environments/environment';
+
 
 
 
@@ -86,9 +86,9 @@ import { SobreComponent } from './views/sobre/sobre.component';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
-    FlexLayoutModule, // flex layout
-    
-    
+    FlexLayoutModule,
+    MatProgressBarModule
+
 
   ],
   providers: [],

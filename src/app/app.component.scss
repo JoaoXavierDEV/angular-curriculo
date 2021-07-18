@@ -8,7 +8,7 @@ mat-sidenav {
     background-color: #220126;
     border-right: 6px rgb(0, 132, 255) solid;
     color: white;
-    padding: 16px;
+    padding: 12px;
     text-align: center;
 }
 
@@ -20,6 +20,7 @@ mat-sidenav {
     justify-content: space-between !important;
     align-items: stretch;
     align-content: stretch;
+    width: 310px;
 
     height: calc(100vh - 100px);
 
@@ -97,7 +98,7 @@ Mat-List-Option[aria-selected="false"]:hover {
 
 .mediasSociais {
     // display: block;
-    // border: 1px blue solid;
+     // border: 1px blue solid;
     // margin-bottom: 0px;
  //   background-color: red;
 

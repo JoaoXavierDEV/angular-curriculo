@@ -66,12 +66,12 @@ mat-card {
 }
 
 img {
-     // max-width: 100%;
+    // max-width: 100%;
     display: block;
-      object-fit: cover;
-      height: 200px;
-      // width: fit-content;
-      
+    object-fit: cover;
+    height: 200px;
+    // width: fit-content;
+
 }
 
 mat-toolbar {
@@ -94,4 +94,8 @@ mat-card {
 p,
 a {
     color: darkblue;
+}
+
+@media (max-width: 800px) {
+    
 }

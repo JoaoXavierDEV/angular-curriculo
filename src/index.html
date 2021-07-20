@@ -25,6 +25,12 @@
 <!--mat-typography-->
 <body class="">
 <style>
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
 
 .c-loader {
@@ -34,6 +40,7 @@
   border-top-color: #451996;
   height: 50px;
   width: 50px;
+  margin: 25px;
 }
 
 @keyframes is-rotating {
@@ -43,8 +50,11 @@
 }
 </style>
   <app-root>
-    Carregando...
-    <div class="c-loader"></div>
+    <div class="loading">
+      <p>Carregando...</p>
+      <div class="c-loader"></div>
+      
+    </div>
 
   </app-root>
   

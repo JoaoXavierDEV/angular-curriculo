@@ -9,7 +9,7 @@ $corPrimaria: BLUE;
 
 section {
     background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
-    height: calc(100vh);
+    width: 100%;
     background-repeat: no-repeat;
     background-position: 10%;
     background-size: cover;
@@ -102,14 +102,24 @@ mat-list {
     margin-top: 20px;
 
     mat-list-item {
+        // border: 1px yellow dotted;
         color: white;
 
         .logoHabilidade {
             padding: 0%;
+            
+        }
+
+        .textHab {
+            font-weight: 50;
+            font-size: clamp(12px, 18px, 58px);
+            letter-spacing: 1px;
         }
 
         img {
             border-radius: 0%;
+        
+            user-select: none;
             width: $iconHab;
             height: $iconHab;
             // background-color: #ff0000;

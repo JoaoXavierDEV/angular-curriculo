@@ -59,16 +59,22 @@
 
 ////@at-root
 
-mat-card{
+mat-card {
     max-width: 400px;
     color: darkblue;
-    
-}
-
-img{
 
 }
- mat-toolbar {
+
+img {
+     // max-width: 100%;
+    display: block;
+      object-fit: cover;
+      height: 200px;
+      // width: fit-content;
+      
+}
+
+mat-toolbar {
     justify-content: space-between;
 }
 
@@ -76,8 +82,8 @@ img{
     padding: 20px;
 }
 
-.content>mat-card {
-     margin-bottom: 16px;
+mat-card {
+    margin-bottom: 16px;
 }
 
 .column-label {
@@ -85,6 +91,7 @@ img{
     font-size: 1rem;
 }
 
-p{
+p,
+a {
     color: darkblue;
 }

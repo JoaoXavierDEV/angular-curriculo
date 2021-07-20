@@ -42,8 +42,13 @@
             <mat-list>
 
                 <mat-list-item *ngFor="let habContent of habilidades">
-                    <img mat-list-icon class="logoHabilidade" [src]="habContent.img" alt="">
-                    <div mat-line>{{habContent.habilidade + '% - '}}{{habContent.nome}}</div>
+                    <img mat-list-icon class="logoHabilidade" draggable="false" oncontextmenu="return false;" [src]="habContent.img" alt="">
+
+                    <div class="textHab" mat-line fxLayout="row" fxLayoutAlign="space-between none">
+
+                        <div>{{habContent.nome}}</div>
+                        <div>{{habContent.habilidade + '%'}}</div>
+                    </div>
                     <div mat-line>
                      
                         <mat-progress-bar mode="determinate" [value]="habContent.habilidade"></mat-progress-bar>

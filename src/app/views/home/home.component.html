@@ -1,15 +1,13 @@
 <section class="animate__animated animate__fadeIn">
-    <div class="conteudo" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div class="conteudo" fxLayout="row wrap" fxLayoutAlign="center center" >
 
-        <article>
+        <article class="article1">
             <div class="tituloH1">
                 <h1>Objetivo</h1>
             </div>
-
-            <p>Atuar como desenvolvedor fullstack</p>
+            <p>{{objetivo}}</p>
         </article>
-
-        <article>
+        <article class="article2">
             <div class="tituloH1">
                 <!--<object data="../../../assets/sistema/outros/h1.svg"></object>-->
                 <h1>Formação</h1>
@@ -27,22 +25,22 @@
                 <li class="li">
                     Técnico em Informática | SENAC
                     <ol>
-
                         <b>JANEIRO/2018 – AGOSTO/2019</b>
                     </ol>
                 </li>
             </ul>
         </article>
-        <article>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" >
+        <article class="article3">
             <div class="tituloH1">
                 <h1>Habilidades</h1>
             </div>
-
-
             <mat-list>
 
                 <mat-list-item *ngFor="let habContent of habilidades">
-                    <img mat-list-icon class="logoHabilidade" draggable="false" oncontextmenu="return false;" [src]="habContent.img" alt="">
+                    <img mat-list-icon class="logoHabilidade" draggable="false" oncontextmenu="return false;"
+                        [src]="habContent.img" alt="">
 
                     <div class="textHab" mat-line fxLayout="row" fxLayoutAlign="space-between none">
 
@@ -50,15 +48,17 @@
                         <div>{{habContent.habilidade + '%'}}</div>
                     </div>
                     <div mat-line>
-                     
-                        <mat-progress-bar mode="determinate" [value]="habContent.habilidade"></mat-progress-bar>
+
+                        <mat-progress-bar [color]="color" class="mat-progress-bar" mode="determinate"  [value]="habContent.habilidade"></mat-progress-bar>
                     </div>
                 </mat-list-item>
 
-     
+
 
             </mat-list>
         </article>
-
     </div>
+
+
+
 </section>

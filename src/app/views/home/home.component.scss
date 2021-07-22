@@ -3,61 +3,78 @@ $background2: 'https://res.cloudinary.com/practicaldev/image/fetch/s--hGHVK7xY--
 
 // paleta de cor
 $rosa: #FC10A3;
-$azul: #0866FF;
+$azul: #001ce6;
 
-$corPrimaria: BLUE;
+$card_w: 550px;
 
 section {
-    background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
-    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    // background: url($background1);
+    // background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
+
+    // width: 100%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: 10%;
-    background-size: cover;
+    background-position: 0%;
+    background-size: 100%;
+
 }
 
+*,
 .conteudo {
-    padding: 40px;
+    // border: rgb(47, 0, 255) 1px dashed;
 }
 
 article {
-    // backdrop-filter: drop-shadow(10px 10px 10px rgb(12, 248, 0));
-    width: calc(100vw - 500px);
+    box-shadow: 6px 6px $azul, 12px 12px $rosa, rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
-    box-shadow: 5px 5px $azul, 10px 10px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
-    // background: #1010103b;
+    border-radius: 32px;
+    background-color: var(--corBackground3);
+    // backdrop-filter: blur(16px) saturate(100%);
 
-    // box-shadow: 10px 5px 50px rgba(0, 0, 0, 0.521);
-    border-radius: 25px;
-    // border: yellow dotted;
-    backdrop-filter: blur(16px) saturate(100%);
+    padding: 40px;
+    margin: 20px 20px;
+    // transition: box-shadow 800ms, backdrop-filter 200ms linear;
+    transition: box-shadow 400ms;
 
+}
 
+.article1,
+.article2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    padding: 20px;
-    margin-bottom: 30px;
-
-
-    transition: box-shadow 800ms, backdrop-filter 200ms linear;
+    // width: calc(100vw - 90%);
+    width: 550px;
+    height: 250px;
 
     p {
-        // background-color: rebeccapurple;
-        margin-top: 12px;
+        margin-top: 8%;
     }
+}
+
+.article3 {
+    // width: calc(100vw - 650px);
+    width: 1100px;
 }
 
 article:hover {
     backdrop-filter: blur(16px) saturate(200%);
-    box-shadow: -5px -5px $azul, 5px 5px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
-    // box-shadow: 10px 10px $azul, -10px -10px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.2);
+    // box-shadow: -5px -5px $azul, 5px 5px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.9);
+
+    box-shadow: -6px -6px $azul, 6px 6px $rosa, rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
 }
 
 
 
 
 .tituloH1 {
-    display: block;
+    //  display: block;
     // grid-template-rows: 1fr;
-    height: 100%;
+    // height: 30%;
     // justify-content: start;
     /// text-align: center;
     //align-items: center;
@@ -96,18 +113,16 @@ article:hover {
     }
 }
 
-$iconHab: 42px;
 
+$iconHab: 42px;
 mat-list {
     margin-top: 20px;
 
     mat-list-item {
-        // border: 1px yellow dotted;
-        color: white;
+    
 
         .logoHabilidade {
             padding: 0%;
-            
         }
 
         .textHab {
@@ -118,7 +133,7 @@ mat-list {
 
         img {
             border-radius: 0%;
-        
+
             user-select: none;
             width: $iconHab;
             height: $iconHab;
@@ -136,18 +151,25 @@ mat-list {
     }
 }
 
+.mat-progress-bar .mat-progress-bar-fill::after {
+    background-color: var(--corPrimaria) !important;
+    background-color: yellow !important;
+    fill: #001ce6;
+    color: red;
+}
+
 @media (max-width: 800px) {
     article {
-        width: 80vw;
+        width: 100vw;
+        margin: 0px 0px 40px 0px;
+
     }
 
     section {
-        background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%) url($background1);
-        height: auto;
-        width: auto;
-        background-repeat: no-repeat;
-        background-position: 10%;
-        background-size: cover;
+
+        height: 100%;
+        width: 100%;
+
     }
 
     section .conteudo {
@@ -162,7 +184,7 @@ mat-list {
 
 
             ul li {
-                font-size: 16px;
+                // font-size: 16px;
                 // list-style: square inside;
                 margin: 20px 0px;
                 // border: 2px yellow dotted;
@@ -176,5 +198,21 @@ mat-list {
                 }
             }
         }
+    }
+
+    .article1,
+    .article2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        //width: calc(100vw - 1400px);
+        width: 700px;
+        height: 450px;
+    }
+
+    .article3 {
+        width: 700px;
     }
 }

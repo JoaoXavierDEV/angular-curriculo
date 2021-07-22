@@ -37,20 +37,31 @@ $curriculo-theme: mat.define-light-theme((color: (primary: $curriculo-primary,
 
 // @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+// paleta de cor
+$rosa: #FC10A3;
+$azul: #001ce6;
 $textoTitulo: #ca0505;
 
 :root {
-    --corPrimaria: #d9ff00;
-    --corSecundaria: #000000;
-    --textoTitulo: #ffffff;
-    --textoParagrafo: #000;
-    --textoSubTitulo: #000;
-    --corBackground: #111111;
-    --corBackground2: #220126;
+    --corPrimaria: #001ce6;
+    --corPrimaria0: #d9ff00;
+    --corSecundaria: #0084ff;
 
-    --wallpaper1: $background1;
-    --wallpaper2: $background2;
+    --textoParagrafo: #000;
+    --textoTitulo: #090909;
+    --textoSubTitulo: #000;
+
+    --texto_h_Paragrafo: rgb(255, 255, 255);
+    --texto_h_Titulo: #ffffff;
+    --texto_h_SubTitulo: rgb(255, 255, 255);
+
+
+
+    --corBackground: #dcdcdc;
+    --corBackground2: #FCD6E2;
+    --corBackground3: #ffffff;
 }
+
 
 
 html,
@@ -61,9 +72,9 @@ body {
     //font-family: 'Saira Condensed', sans-serif !important;
     // 
     font-family: 'Open Sans', sans-serif;
-   //  font-family: 'Exo', sans-serif;
+    //  font-family: 'Exo', sans-serif;
     // font-family: 'Orbitron', sans-serif;
-    background-color: #111111;
+    background-color: #EFF2F4;
 }
 
 body {
@@ -86,14 +97,14 @@ a {
     list-style: none;
     font-size: 1.2rem;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--textoParagrafo);
 }
 
 
 
 
 ::selection {
-    background: rgb(255, 255, 0);
+    background: var(--corPrimaria);
     color: rgb(0, 0, 0);
 }
 
@@ -110,5 +121,5 @@ img {
 }*/
 
 ::-webkit-scrollbar {
-    display: none;
+    // display: none;
 }

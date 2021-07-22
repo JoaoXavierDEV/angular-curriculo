@@ -13,14 +13,14 @@ img {
     display: inline-block;
     width: $tamanhoDaFotoPerfil;
     height: $tamanhoDaFotoPerfil;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+   // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);//
     border-radius: $border-radius;
     transition-duration: 150ms;
     transition-delay: 50ms;
     transition-property: box-shadow;
 
     &:hover {
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+     //   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
     }
 }
 

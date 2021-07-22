@@ -1,33 +1,63 @@
-@use '~@angular/material'as mat;
+// @use '~@angular/material'as mat;
+$rosa: #FC10A3;
+$azul: #001ce6;
+
+@mixin box-shadow {
+    box-shadow: 7px 7px $azul, 12px 12px $rosa; // 10px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 25px !important;
+    // backdrop-filter: blur(16px) saturate(100%);
+
+}
+
+@mixin borda {
+    border: rgb(255, 0, 0) 3px dotted;
+}
+
+.appContainer {
+    background-color: #EFF2F4;
+}
+
+//  .appContainer,
+mat-drawer-opened,
+mat-drawer-side,
+mat-drawer,
+// .mat-drawer-container,
+mat-sidenav {
+    background-color: var(--corBackground3);
+}
 
 mat-sidenav {
 
-    width: 350px;
+    @include box-shadow;
+    width: 340px;
+    height: calc(100vh - 100px);
 
-
-    background-color: #220126;
-    border-right: 6px rgb(0, 132, 255) solid;
-    color: white;
+    //border-right: 6px #0084ff solid;
+    margin: 10px 12px;
     padding: 12px;
     text-align: center;
+
+}
+
+* {
+    // border: 1px red dotted;
 }
 
 .drawer {
-    // border: 2px solid rgb(255, 255, 255);
 
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: stretch;
     align-content: stretch;
     width: 310px;
 
-    height: calc(100vh - 100px);
 
 }
 
 mat-selection-list mat-list-option {
-    color: white;
+    color: var(--textoTitulo);
 }
 
 .menu-button {
@@ -57,20 +87,19 @@ mat-selection-list mat-list-option {
 
 }
 
-
-
 Mat-List-Option[aria-selected="true"] {
-    border-left: 8px solid var(--corPrimaria);
+    // border-left: 8px solid var(--corPrimaria);
     transition: background-color, border-left 600ms;
-    background-color: #0000004d;
+    background-color: #001ce6;
+    color: #fff !important;
 
     &:hover {
-        background-color: rgba(5, 113, 208, 0.267);
+        background-color: #001be6b7;
     }
 }
 
 Mat-List-Option[aria-selected="false"]:hover {
-    background-color: rgba(5, 113, 208, 0.925);
+    background-color: var(--corSecundaria);
 
 }
 
@@ -81,52 +110,54 @@ Mat-List-Option[aria-selected="false"]:hover {
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    color: rgb(255, 255, 255);
+    color: rgb(24, 24, 24);
     border-bottom: 4px solid transparent;
 
     // box-sizing: border-box;
     transition: border-bottom 800ms;
 
     // background-color: red;
-   // border: 2px solid rgb(255, 255, 255);
+    // border: 2px solid rgb(255, 255, 255);
 
     // border-radius: 50%;
     &:hover {
-        border-bottom: 4px solid var(--corPrimaria);
+        // border-bottom: 4px solid var(--corPrimaria);
+        color: var(--corBackground);
+        background-color: var(--corPrimaria);
     }
-}
-
-.mediasSociais {
-    // display: block;
-     // border: 1px blue solid;
-    // margin-bottom: 0px;
- //   background-color: red;
 
 
 }
+
+
 
 .content {
-    // position: absolute;
-    height: calc(100vh - 98px);
-    border-radius: 10px;
-    margin: 16px;
-    margin-left: 32px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: calc(100vh - 111px);
+    border-radius: 32px;
+    margin: 20px 32px 0px 42px;
+    // box-shadow: 7px 7px $azul, 13px 13px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
+    // margin-left: 42px;
+    overflow: scroll;
+    color: rgb(186, 186, 186);
 
-    font-size: 2rem;
-    color: lightgray;
-    //background-color: #002b5c;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // @include mat.elevation(8, #e91e63, 1.8);
+    // background-color: #002b5c;
 }
 
 mat-sidenav-content {
-    background-color: #212121;
-    // background-color: rgb(167, 62, 62);
+
+    background-color: var(--corBackground);
+
+
 }
 
 mat-sidenav-container {
+    background-color: var(--corBackground);
     height: calc(100vh - 65px);
 
 }
@@ -136,16 +167,23 @@ mat-sidenav-container {
 }
 
 mat-toolbar {
-    @include mat.elevation(9);
-    background-color: var(--corBackgroud);
-    color: white;
+    // @include mat.elevation(9);
 
+    background-color: var(--corPrimaria);
+    color: rgb(221, 221, 221);
+    height: 65px;
+
+    .iconMenu {
+        cursor: pointer;
+    }
 }
 
 .logoMenu {
+    display: none;
+    visibility: hidden;
     width: 80px;
     fill: var(--corPrimaria);
-    padding: 0px;
+    padding: 10px;
     margin-top: 6px;
 
     &:hover {

@@ -1,8 +1,11 @@
-<div class="content animate__animated animate__fadeIn">
+<div class="content animate__animated animate__fadeIn" >
     <div fxLayout="row wrap" fxLayoutAlign="space-evenly none">
       
 
             <mat-card class="mat-elevation-z8" *ngFor='let dados of projetos'>
+                <div class="container">
+
+                
                 <mat-card-header>
                     <mat-card-title>{{dados.nome}}</mat-card-title>
                     <mat-card-subtitle>{{dados.linguagem}}</mat-card-subtitle>
@@ -31,6 +34,7 @@
                     <button mat-button><a href={{dados.github}} target="_blank" >Github</a> </button>
                     
                 </mat-card-actions>
+                </div>
             </mat-card>
       
     </div>

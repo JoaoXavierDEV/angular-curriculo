@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 
 export interface Section {
   nome: string;
@@ -11,6 +12,7 @@ export interface Section {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  color: ThemePalette = 'accent';
 
   title:string = 'Currículo';
 
@@ -18,6 +20,8 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  objetivo: string = 'Atuar como desenvolvedor fullstack - Lorem ipsum, dolor sit amet consectetur adipisicing elit. A maxime vel atque illum quidem, deserunt ullam ex nesciunt cum maiores, reiciendis tenetur temporibus! Quo incidunt dignissimos minus dolor! Ullam, earum.';
 
   habilidades: Section[] = [
     {

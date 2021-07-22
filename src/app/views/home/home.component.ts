@@ -40,6 +40,11 @@ export class HomeComponent implements OnInit {
       img: '../../../assets/sistema/svg-clean/Sass_Logo_Color.svg',
     },
     {
+      nome: 'PHP',
+      habilidade: '50',
+      img: '../../../assets/sistema/svg-clean/php.svg',
+    },
+    {
       nome: 'DotNET',
       habilidade: '10',
       img: '../../../assets/sistema/svg-clean/NET_Logo.svg',

@@ -58,10 +58,33 @@
 
 
 ////@at-root
+.container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+
+    justify-self: right;
+    justify-items: self-start;
+    text-justify: distribute-all-lines;
+
+    justify-content: space-between;
+    align-content: space-between;
+    // border: 1px red dotted !important;
+
+}
+
 
 mat-card {
-    max-width: 400px;
+    width: 400px;
     color: darkblue;
+    overflow: hidden;
+    p{
+        height: 100px;
+
+    }
+
+
 
 }
 
@@ -69,8 +92,9 @@ img {
     // max-width: 100%;
     display: block;
     object-fit: cover;
-    height: 200px;
-    // width: fit-content;
+    max-height: 180px;
+
+
 
 }
 
@@ -80,8 +104,8 @@ mat-toolbar {
 
 .content {
     padding: 20px;
-    background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx');
-    height: 100%;
+    // background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx');
+    // height: 100%;
     background-attachment: fixed;
 }
 

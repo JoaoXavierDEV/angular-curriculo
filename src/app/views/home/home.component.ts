@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  objetivo: string = 'Atuar como desenvolvedor fullstack - Lorem ipsum, dolor sit amet consectetur adipisicing elit. A maxime vel atque illum quidem, deserunt ullam ex nesciunt cum maiores, reiciendis tenetur temporibus! Quo incidunt dignissimos minus dolor! Ullam, earum.';
+  objetivo: string = 'Atuar como desenvolvedor fullstack, aprender novas tecnologias e cumprir metas.';
 
   habilidades: Section[] = [
     {

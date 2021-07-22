@@ -1,4 +1,4 @@
-// @use '~@angular/material'as mat;
+ @use '~@angular/material'as mat;
 $rosa: #FC10A3;
 $azul: #001ce6;
 
@@ -132,12 +132,14 @@ Mat-List-Option[aria-selected="false"]:hover {
 
 
 .content {
+    // border-left: 4px dodgerblue dashed;
 
-    height: calc(100vh - 111px);
-    border-radius: 32px;
-    margin: 20px 32px 0px 42px;
+     height: calc(100vh - 65px);
+    /// border-radius: 32px;
+
+    // margin: 20px 32px 0px 42px;
     // box-shadow: 7px 7px $azul, 13px 13px $rosa, 10px 10px 30px rgba(0, 0, 0, 0.5);
-    // margin-left: 42px;
+     margin-left: 42px;
     overflow: scroll;
     color: rgb(186, 186, 186);
 
@@ -152,13 +154,13 @@ Mat-List-Option[aria-selected="false"]:hover {
 mat-sidenav-content {
 
     background-color: var(--corBackground);
-
+    
 
 }
 
 mat-sidenav-container {
     background-color: var(--corBackground);
-    height: calc(100vh - 65px);
+     height: calc(100vh - 65px);
 
 }
 
@@ -167,8 +169,8 @@ mat-sidenav-container {
 }
 
 mat-toolbar {
-    // @include mat.elevation(9);
-
+    @include mat.elevation(8);
+    
     background-color: var(--corPrimaria);
     color: rgb(221, 221, 221);
     height: 65px;
@@ -194,6 +196,11 @@ mat-toolbar {
 }
 
 @media (max-width: 800px) {
+    mat-toolbar {
+        display: block;
+
+    }
+
     .content {
         margin: 16px;
     }

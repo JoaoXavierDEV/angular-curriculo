@@ -37,7 +37,7 @@ export class AppComponent {
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       if (res.matches) {
-        this.sidenav.mode = 'over';
+        this.sidenav.mode = 'over';        
         this.sidenav.close();
       } else {
         this.sidenav.mode = 'side';
@@ -50,11 +50,11 @@ export class AppComponent {
     navigator.share({
       title: 'Currículo',
       url: 'https://joaoxavierdeveloper.netlify.app/',
-      text: '!!!!!'
+      text: ''
     }).then(() => {
       console.log('foii');
     })
-      .catch(console.error)
+      .catch(console.error) 
   }
 
 

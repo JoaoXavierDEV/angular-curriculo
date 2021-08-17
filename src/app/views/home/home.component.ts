@@ -14,10 +14,10 @@ export interface Section {
 export class HomeComponent implements OnInit {
   color: ThemePalette = 'accent';
 
-  title:string = 'Currículo';
+  title: string = 'Currículo';
 
   constructor() { }
-  
+
   ngOnInit(): void {
   }
 
@@ -26,12 +26,21 @@ export class HomeComponent implements OnInit {
   habilidades: Section[] = [
     {
       nome: 'Angular',
-      habilidade: '90',
+      habilidade: '80',
       img: '../../../assets/sistema/svg-clean/angular.svg',
     },
     {
+      nome: 'ASP.NET CORE MVC',
+      habilidade: '75',
+      img: '../../../assets/sistema/svg-clean/NET_Core_Logo.svg',
+    },
+    {
+      nome: 'C#',
+      habilidade: '60',
+      img: '../../../assets/sistema/svg-clean/csharp.svg',
+    }, {
       nome: 'Flutter',
-      habilidade: '85',
+      habilidade: '60',
       img: '../../../assets/sistema/svg-clean/flutter.svg',
     },
     {
@@ -44,13 +53,40 @@ export class HomeComponent implements OnInit {
       habilidade: '50',
       img: '../../../assets/sistema/svg-clean/php.svg',
     },
-    {
-      nome: 'DotNET',
-      habilidade: '10',
-      img: '../../../assets/sistema/svg-clean/NET_Logo.svg',
-    },
 
 
   ];
+
+  cursos = [{
+    nome: 'Dominando o ASP.NET MVC Core',
+    link: "https://desenvolvedor.io/curso-online-dominando-o-asp-net-mvc-core",
+    linkCertificado: "",
+    andamento: '50',
+    img: '../../../assets/sistema/svg-clean/NET_Core_Logo.svg',
+  },
+  {
+    nome: 'C# COMPLETO Programação Orientada a Objetos + Projetos',
+    link: "https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/",
+    linkCertificado: "",
+    andamento: '35',
+    img: '../../../assets/sistema/svg-clean/csharp.svg',
+  },
+  {
+    nome: 'Angular - Loiane.training',
+    link: "https://loiane.training/curso/angular",
+    linkCertificado: "",
+    andamento: '10',
+    img: '../../../assets/sistema/svg-clean/angular.svg',
+  },
+  {
+    nome: 'Aprenda Flutter e Desenvolva Apps Para Android e IOS 2021',
+    link: "https://www.udemy.com/course/curso-flutter/",
+    linkCertificado: "",
+    andamento: '20',
+    img: '../../../assets/sistema/svg-clean/flutter.svg',
+  }
+
+
+    ,];
 
 }

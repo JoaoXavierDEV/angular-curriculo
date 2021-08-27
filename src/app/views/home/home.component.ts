@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
     nome: 'Dominando o ASP.NET MVC Core',
     link: "https://desenvolvedor.io/curso-online-dominando-o-asp-net-mvc-core",
     linkCertificado: "",
-    andamento: '50',
+    andamento: '78',
     img: '../../../assets/sistema/svg-clean/NET_Core_Logo.svg',
   },
   {

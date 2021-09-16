@@ -62,8 +62,18 @@
                         <div class="cursosInfo">
                             <div class="textHab">
                                 <a [href]=c.link target="_blank">{{c.nome}}</a>
-                                    
-                                <div>{{c.andamento + '%'}}</div>
+
+                                <div *ngIf="c.andamento === '100'; then Certificado else Andamento"></div>
+
+                                <ng-template #Certificado>
+                                    <div>
+                                        <a [href]="c.linkCertificado" target="_blanck">Concluído ✅</a>
+                                    </div>
+                                </ng-template>
+                                <ng-template #Andamento>
+                                    <div>{{c.andamento + '%'}}</div>
+                                </ng-template>
+
                             </div>
 
                             <div>

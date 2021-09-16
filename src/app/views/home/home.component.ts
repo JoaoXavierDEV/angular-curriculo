@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     },
     {
       nome: 'ASP.NET CORE MVC',
-      habilidade: '75',
+      habilidade: '100',
       img: '../../../assets/sistema/svg-clean/NET_Core_Logo.svg',
     },
     {
@@ -57,11 +57,12 @@ export class HomeComponent implements OnInit {
 
   ];
 
+  
   cursos = [{
     nome: 'Dominando o ASP.NET MVC Core',
     link: "https://desenvolvedor.io/curso-online-dominando-o-asp-net-mvc-core",
-    linkCertificado: "",
-    andamento: '78',
+    linkCertificado: "https://desenvolvedor.io/certificados/e8051804-ce28-43a9-9251-2081f94db2a6",
+    andamento: '100',
     img: '../../../assets/sistema/svg-clean/NET_Core_Logo.svg',
   },
   {
@@ -85,8 +86,9 @@ export class HomeComponent implements OnInit {
     andamento: '20',
     img: '../../../assets/sistema/svg-clean/flutter.svg',
   }
+  
+  
+  ,];
 
-
-    ,];
 
 }

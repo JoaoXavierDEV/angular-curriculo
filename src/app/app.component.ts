@@ -2,9 +2,6 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
-
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,14 +16,14 @@ export class AppComponent {
     this.sidenav.close();
   }
 
-  
-
-
-
   constructor(
     private observer: BreakpointObserver) {
    
    }
+
+  teste() {
+    window.navigator.vibrate(200);
+  }
 
   vaiFechar() {
     if (this.sidenav.mode != 'side') {
@@ -34,7 +31,11 @@ export class AppComponent {
     }
   }
 
-  ngAfterViewInit() {
+  
+   ngAfterViewInit() {
+   //  ngAfterContentInit(){
+    
+
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = 'over';        
@@ -47,6 +48,9 @@ export class AppComponent {
   }
 
   compartilhar() {
+
+      // window.navigator.vibrate(50);
+    
     navigator.share({
       title: 'Currículo',
       url: 'https://joaoxavierdeveloper.netlify.app/',

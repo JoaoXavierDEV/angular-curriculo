@@ -19,7 +19,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
+
+
 
   objetivo: string = 'Atuar como desenvolvedor fullstack, aprender novas tecnologias e cumprir metas.';
 

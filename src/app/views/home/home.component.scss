@@ -11,8 +11,8 @@ section {
     font-family: 'Open Sans', sans-serif;
     // background: url($background1);
     // background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
-
-    // width: 100%;
+    // margin-left: 90px;
+    //  width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 0%;
@@ -22,7 +22,8 @@ section {
 
 *,
 .conteudo {
-    // border: rgba(47, 0, 255, 0.514) 1px dashed;
+    //  border: rgba(255, 0, 0, 0.514) 1px dashed;
+
 }
 
 article {
@@ -45,9 +46,11 @@ article {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    // width: calc(100% - 1050px);
+    width: calc(42%);
 
-    width: calc(100% - 1050px);
-    min-width: 350px;
+
+    // min-width: 350px;
     // width: 550px;
     height: 250px;
 
@@ -57,8 +60,9 @@ article {
 }
 
 .article3 {
-    // width: calc(100vw - 650px);
-    width: 1100px;
+    //width: calc(100vw - 650px);
+    width: calc(100%);
+    // width: 1100px;
 }
 
 article:hover {
@@ -160,7 +164,6 @@ mat-list {
     &:hover {
         color: #a10566;
         cursor: default;
-
     }
 }
 
@@ -175,7 +178,6 @@ mat-list {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
 }
 
 .cursosInfo {
@@ -199,33 +201,30 @@ mat-list {
 
 
 
-@media (max-width: 800px) {
-
+@media only screen and (max-width: 800px) {
     article {
         width: 100vw;
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 20px 0px;
 
+        // background-color: #0866FF;
 
+        padding: 20px 30px 28px 30px;
+        margin: 12px 4px;
     }
 
     section {
 
-        height: 100%;
-        width: 100%;
+        margin: 0px;
+        padding: 4px 16px;
 
     }
 
     section .conteudo {
-        padding: 10px;
+
 
         article {
 
             // height: 600px;
-            // background-color: #0866FF;
-
-
-
-
             ul li {
                 // font-size: 16px;
                 // list-style: square inside;
@@ -249,27 +248,67 @@ mat-list {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-
-
         //width: calc(100vw - 1400px);
-        width: 650px;
-        min-height: 320px;
-        min-width: unset;
-
-        // max-height: 560px;
-
+        width: 100%;
 
         p {
-
-
             // padding-bottom: 10%;
             margin-top: 16px;
-
         }
     }
 
     .article3 {
-        // width: 700px;
-        width: calc(100vw - 140px);
+        // width: 100%;
+        // width: calc(100vw - 140px);
+
+    }
+
+    .cursos {
+        display: flex !important;
+        flex-wrap: wrap;
+        // background-color: #03040caf;
+        //border: rgba(255, 0, 0, 0.514) 1px dashed;
+
+        .logoHabilidade {
+            grid-area: logo;
+        }
+
+        .cursosInfo {
+
+           
+            //background-color: #001be634;
+
+            .textHab {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .nomeCurso {
+                font-size: medium;
+            }
+
+        }
+
+    }
+}
+
+.progresso {
+    //background-color: #e60000c2;
+    grid-area: progresso;
+}
+
+.progressoBarra {
+    grid-area: progressoBarra !important;
+   // border: rgb(68, 0, 255) 2px dashed;
+    color: #2710fc;
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+
+    .article1,
+    .article2 {
+
+        max-width: 36%;
     }
 }

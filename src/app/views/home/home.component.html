@@ -1,7 +1,7 @@
 <section class="animate__animated animate__fadeIn">
     <div class="conteudo" fxLayout="row wrap" fxLayoutAlign="center center ">
 
-        <article class="article1">
+       <article class="article1">
             <div class="tituloH1">
                 <h1>Objetivo</h1>
             </div>
@@ -33,22 +33,11 @@
                 </li>
             </ul>
         </article>
-        <!--<article class="article2">
-            <div class="tituloH1">
-                <h1>Cursos</h1>
-            </div>
-    <mat-list>
-        <mat-list-item>ASP.NET CORE MVC</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>C#</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>ANGULAR LOIANE</mat-list-item>
-    </mat-list>
-        </article>-->
     </div>
     <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <!--<div >-->
         <article class="article3">
-            <div class="tituloH1">
+        <div class="tituloH1">
                 <h1>Cursos</h1>
             </div>
             <div>
@@ -56,42 +45,38 @@
                 <div *ngFor="let c of cursos">
                     <div class="cursos">
 
-                        <img class="logoHabilidade" draggable="false" oncontextmenu="return false;" [src]="c.img"
-                            alt="">
-
+                        <img class="logoHabilidade" draggable="false" oncontextmenu="return false;" [src]="c.img" alt="">
                         <div class="cursosInfo">
                             <div class="textHab">
-                                <a [href]=c.link target="_blank">{{c.nome}}</a>
+                                <a class="nomeCurso" [href]=c.link target="_blank">{{c.nome}}</a>
+                                <div class="progresso">
 
-                                <div *ngIf="c.andamento === '100'; then Certificado else Andamento"></div>
-
-                                <ng-template #Certificado>
-                                    <div>
-                                        <a [href]="c.linkCertificado" target="_blanck">Concluído ✅</a>
-                                    </div>
-                                </ng-template>
-                                <ng-template #Andamento>
-                                    <div>{{c.andamento + '%'}}</div>
-                                </ng-template>
+                                    <div *ngIf="c.andamento === '100'; then Certificado else Andamento"></div>
+                                    
+                                    <ng-template #Certificado>
+                                        <div>
+                                            <a [href]="c.linkCertificado" target="_blanck">Concluído ✅</a>
+                                        </div>
+                                    </ng-template>
+                                    <ng-template #Andamento>
+                                        <div>{{c.andamento + '%'}}</div>
+                                    </ng-template>
+                                </div>
 
                             </div>
 
-                            <div>
+                            <div class="progressoBarra">
                                 <mat-progress-bar [color]="color" class="mat-progress-bar" mode="determinate"
                                     [value]="c.andamento"></mat-progress-bar>
                             </div>
 
                         </div>
-
                     </div>
-
-
-
                 </div>
 
 
-
             </div>
+
         </article>
     </div>
 

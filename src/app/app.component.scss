@@ -44,7 +44,7 @@ mat-sidenav {
 }
 
 .drawer {
-
+    // background-color: #001ce6;
     height: calc(100vh - 130px);
     display: flex;
     flex-direction: column;
@@ -202,7 +202,8 @@ mat-toolbar {
     }
 
     .content {
-        margin: 16px;
+        margin: 0px 0px;
+        // padding: 2px;
     }
 
     .logoMenu {

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
 
 
-  objetivo: string = 'Atuar como desenvolvedor fullstack, aprender novas tecnologias e cumprir metas.';
+  objetivo: string = 'Desenvolvedor .NET | C# | Angular';
 
   habilidades: Section[] = [
     {
@@ -40,23 +40,24 @@ export class HomeComponent implements OnInit {
     },
     {
       nome: 'C#',
-      habilidade: '60',
+      habilidade: '100',
       img: '../../../assets/sistema/svg-clean/csharp.svg',
     }, {
       nome: 'Flutter',
-      habilidade: '60',
+      habilidade: '80',
       img: '../../../assets/sistema/svg-clean/flutter.svg',
     },
     {
       nome: 'CSS - SCSS',
-      habilidade: '60',
+      habilidade: '100',
       img: '../../../assets/sistema/svg-clean/Sass_Logo_Color.svg',
-    },
-    {
-      nome: 'PHP',
-      habilidade: '50',
-      img: '../../../assets/sistema/svg-clean/php.svg',
-    },
+     }
+    //,
+    // {
+    //   nome: 'PHP',
+    //   habilidade: '50',
+    //   img: '../../../assets/sistema/svg-clean/php.svg',
+    // },
 
 
   ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 export interface Section {
   nome: string;
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit {
   habilidades: Section[] = [
     {
       nome: 'Angular',
-      habilidade: '80',
+      habilidade: '100',
       img: '../../../assets/sistema/svg-clean/angular.svg',
     },
     {
@@ -74,7 +75,7 @@ export class HomeComponent implements OnInit {
     nome: 'C# COMPLETO Programação Orientada a Objetos + Projetos',
     link: "https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/",
     linkCertificado: "",
-    andamento: '35',
+    andamento: '100',
     img: '../../../assets/sistema/svg-clean/csharp.svg',
   },
   {
@@ -88,7 +89,7 @@ export class HomeComponent implements OnInit {
     nome: 'Aprenda Flutter e Desenvolva Apps Para Android e IOS 2021',
     link: "https://www.udemy.com/course/curso-flutter/",
     linkCertificado: "",
-    andamento: '20',
+    andamento: '50',
     img: '../../../assets/sistema/svg-clean/flutter.svg',
   }
   

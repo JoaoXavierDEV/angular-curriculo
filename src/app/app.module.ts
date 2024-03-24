@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import { CardComponent } from './views/component/card/card.component';
-import { FooterComponent } from './views/component/footer/footer.component';
-import { HeaderComponent } from './views/component/header/header.component';
 import { ProjetosComponent } from './views/projetos/projetos.component';
 
 //material
@@ -34,14 +32,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
-
-import { NavComponent } from './views/component/nav/nav.component';
-import { SiteV1Component } from './views/site-v1/site-v1.component';
-
 /// flex layout
-
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 
 
 import { SobreComponent } from './views/sobre/sobre.component';
@@ -56,11 +47,7 @@ import { environment } from '../environments/environment';
     AppComponent,
     HomeComponent,
     CardComponent,
-    FooterComponent,
-    HeaderComponent,
     ProjetosComponent,
-    NavComponent,
-    SiteV1Component,
     SobreComponent,
 
   ],
@@ -68,7 +55,6 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // material
     MatProgressSpinnerModule,
     MatToolbarModule,
     MatIconModule,
@@ -86,7 +72,6 @@ import { environment } from '../environments/environment';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
-    FlexLayoutModule,
     MatProgressBarModule
 
 

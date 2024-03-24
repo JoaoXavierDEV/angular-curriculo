@@ -87,14 +87,14 @@ mat-selection-list mat-list-option {
     text-transform: uppercase;
 
 }
-
-
+// remove input radio nativo do mat list option
+:host ::ng-deep .mat-mdc-list-option .mdc-radio {
+    display: none !important;
+}
 mat-list-option[aria-selected=true] {
     //border-left: 8px solid var(--corPrimaria);
     transition: background-color, border-left 600ms;
     background-color: #001ce6;
-
-
 
     button{
         color: #fff !important;
@@ -208,6 +208,18 @@ mat-toolbar {
 
     }
 }
+
+input[type="radio"][disabled] 
+{
+    border-color: purple;
+}
+input[type="radio"]{
+    
+    border-color: rgb(75, 14, 75);
+}
+
+
+
 
 @media (max-width: 800px) {
     mat-toolbar {

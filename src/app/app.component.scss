@@ -88,21 +88,33 @@ mat-selection-list mat-list-option {
 
 }
 
-Mat-List-Option[aria-selected="true"] {
-    // border-left: 8px solid var(--corPrimaria);
+
+mat-list-option[aria-selected=true] {
+    //border-left: 8px solid var(--corPrimaria);
     transition: background-color, border-left 600ms;
     background-color: #001ce6;
-    color: #fff !important;
+
+
+
+    button{
+        color: #fff !important;
+    }
 
     &:hover {
         background-color: #001be6b7;
     }
 }
 
-Mat-List-Option[aria-selected="false"]:hover {
+mat-list-option[aria-selected=false]:hover {
+    
+    mat-radio-button {
+        display: none !important;
+    }
+    
     background-color: var(--corSecundaria);
 
 }
+
 
 .fa {
     width: 25px;
@@ -151,7 +163,7 @@ Mat-List-Option[aria-selected="false"]:hover {
     // @include mat.elevation(8, #e91e63, 1.8);
     // background-color: #002b5c;
 }
-menu-button
+
 
 mat-sidenav-content {
 

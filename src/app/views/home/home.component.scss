@@ -10,13 +10,16 @@ $card_w: 550px;
 section {
     font-family: 'Open Sans', sans-serif;
     // background: url($background1);
-    // background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
+    //background: linear-gradient(135deg, #4a0259b8 0%, #1a068a88 50%, #450252b8 100%), url($background1);
     // margin-left: 90px;
     //  width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: 100%;
+    margin-right: 2%;
+
+
 
 }
 
@@ -46,13 +49,14 @@ article {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    // width: calc(100% - 1050px);
-    width: calc(42%);
+    width: calc(100% - 650px);
+    //width: calc(20%);
 
 
     // min-width: 350px;
-    // width: 550px;
+    //width: 550px;
     height: 250px;
+    //height: calc(80%);
 
     p {
         margin-top: 8%;
@@ -110,6 +114,11 @@ article:hover {
 
 .conteudo {
     // height: 600px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
 
     ul li {
         list-style: square inside;
